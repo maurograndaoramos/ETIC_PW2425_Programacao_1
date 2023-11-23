@@ -1,0 +1,45 @@
+#Gestão de Stock: Criar um programa que faça a gestão de stock de produtos. O utilizador deve ser capaz de adicionar e remover produtos ao stock. Nota: O aluno deve criar opções para adicionar e remover produtos
+
+stockProdutos = novo Mapa()
+
+funcao adicionarProduto():
+    nomeProduto = entrada("Digite o nome do produto: ")
+    quantidadeProduto = inteiro(entrada("Digite a quantidade do produto: "))
+
+    se stockProdutos.contem(nomeProduto):
+        stockProdutos[nomeProduto] = stockProdutos[nomeProduto] + quantidadeProduto
+    senao:
+        stockProdutos[nomeProduto] = quantidadeProduto
+
+funcao removerProduto():
+    nomeProduto = entrada("Digite o nome do produto a ser removido: ")
+
+    se stockProdutos.contem(nomeProduto):
+        quantidadeRemover = inteiro(entrada("Digite a quantidade a ser removida: "))
+
+        se quantidadeRemover <= stockProdutos[nomeProduto]:
+            stockProdutos[nomeProduto] = stockProdutos[nomeProduto] - quantidadeRemover
+        senao:
+            imprime("Quantidade insuficiente no stock.")
+    senao:
+        imprime("Produto não encontrado no stock.")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Produto ao Stock")
+    imprime("2. Remover Produto do Stock")
+    imprime("3. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        adicionarProduto()
+        imprime("Produto adicionado ao stock com sucesso.")
+    senao se escolha == "2":
+        removerProduto()
+        imprime("Produto removido do stock com sucesso.")
+    senao se escolha == "3":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

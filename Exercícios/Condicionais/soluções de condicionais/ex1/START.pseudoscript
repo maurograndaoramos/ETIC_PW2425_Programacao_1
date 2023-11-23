@@ -1,0 +1,12 @@
+funcao verificaNumero(numero):
+    se numero == 0:
+        imprime("O numero é Zero")
+    se numero > 0:
+        imprime("O numero é positivo")
+    se numero < 0:
+        imprime("O numero é negativo")
+
+    
+entrada("Diga o seu numero", x)
+
+verificaNumero(x)

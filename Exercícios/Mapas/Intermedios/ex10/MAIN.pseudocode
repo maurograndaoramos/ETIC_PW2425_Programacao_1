@@ -1,0 +1,29 @@
+#Dicionário de Sinónimos: Criar um programa que forneça sinónimos para palavras fornecidas pelo utilizador. Nota: O aluno deve criar um dicionário de sinónimos
+
+dicionarioSinonimos = novo Mapa()
+dicionarioSinonimos["feliz"] = ["alegre", "contente", "satisfeito"]
+dicionarioSinonimos["triste"] = ["melancólico", "abatido", "desanimado"]
+
+funcao fornecerSinonimos():
+    palavra = entrada("Digite a palavra para encontrar sinônimos: ")
+
+    se palavra em dicionarioSinonimos:
+        sinonimos = dicionarioSinonimos[palavra]
+        imprime(f"Sinônimos para '{palavra}': {sinonimos}")
+    senao:
+        imprime(f"Não há sinônimos registrados para '{palavra}'.")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Fornecer Sinônimos")
+    imprime("2. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        fornecerSinonimos()
+    se escolha == "2":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

@@ -1,0 +1,30 @@
+agenda_de_contatos = []
+
+funcao adicionarContato(nome, numero):
+    novo_contato = {"nome": nome, "numero": numero}
+    agenda_de_contatos.adicionar(novo_contato)
+    imprime(f"Contato '{nome}' adicionado com sucesso.")
+
+funcao listarContatos():
+    imprime("Agenda de Contatos:")
+    para contato em agenda_de_contatos:
+        imprime(f"Nome: {contato['nome']} - Número: {contato['numero']}")
+
+enquanto True:
+    imprime("Escolha uma opção:")
+    imprime("(1) Adicionar Contato")
+    imprime("(2) Listar Contatos")
+    imprime("(3) Sair")
+
+    entrada("Digite o número da opção desejada: ", escolha)
+
+    se escolha == 1:
+        entrada("Digite o nome do contato: ", nome_contato)
+        entrada("Digite o número de telefone: ", numero_contato)
+        adicionarContato(nome_contato, numero_contato)
+    senao se escolha == 2:
+        listarContatos()
+    senao se escolha == 3:
+        parar  # Sair do loop e encerrar o programa
+    senao:
+        imprime("Opção inválida. Tente novamente.")

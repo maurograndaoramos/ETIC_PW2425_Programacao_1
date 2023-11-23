@@ -1,0 +1,10 @@
+funcao numeroPrimo(x):
+
+    multiplosEncontrados=0
+    cada numero em [2..x]:
+        se x % numero == 0:
+            multiplosEncontrados = multiplosEncontrados + 1
+
+    retorna multiplosEncontrados == 1
+
+

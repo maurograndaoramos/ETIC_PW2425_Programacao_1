@@ -1,0 +1,16 @@
+#Remova elementos duplicados de um array
+
+funcao removerDuplicados(array):
+    arraySemDuplicados = novo Array
+
+    para cada elemento em array:
+        se elemento nao estiver em arraySemDuplicados:
+            adicionar elemento a arraySemDuplicados
+
+    retorne arraySemDuplicados
+
+arrayComDuplicados = [1, 2, 3, 2, 4, 5, 1]
+
+arraySemDuplicados = removerDuplicados(arrayComDuplicados)
+
+imprime("Array sem duplicado:", arraySemDuplicados)

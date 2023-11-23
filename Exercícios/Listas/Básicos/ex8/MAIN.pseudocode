@@ -1,0 +1,6 @@
+#Verifique se um elemento está presente em um array.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificarLista()
+app.start()

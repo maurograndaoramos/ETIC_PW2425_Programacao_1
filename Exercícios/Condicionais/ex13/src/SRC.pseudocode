@@ -1,0 +1,8 @@
+funcao calculadoraDistancia(distancia)
+    entrada("Informe a distância percorrida em quilômetros: ", distancia)
+    custo = distancia * 1.50
+    se distancia > 1                #caso alguém meta um float, que represente viagens de 250 (0.25) ou 750 (0.75) metros or something like that
+        imprime("O custo do transporte para {distancia} quilômetros é de {custo}€")
+    senao  
+        imprime("Não paga nada, viva o investimento em transporte publico!")            #discutivelmente, dá para criar uma variavel chamada distanciaMetros e multiplicar o valor float pelo €pKm e vai dar um valor por cada 100 ou multiplo de 100 metros, mas isso é chularia e transporte publico devia ser de graça anw
+            

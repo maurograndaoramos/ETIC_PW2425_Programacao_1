@@ -1,0 +1,37 @@
+# Guess the Number: Desenvolva um jogo em que o computador escolhe um número aleatório e o jogador tenta adivinhar qual é. O programa deve fornecer dicas para indicar se o palpite está muito alto ou muito baixo.
+
+
+# Lógica
+modelo GuessNumber:
+    construtor():
+        GuessNumber.randomNumber = aleatorio()
+        GuessNumber.tentativas = 3
+
+        
+    funcao WelcomeText():
+        imprime("""
+        =========== Bem Vindo! ===========
+        adivinha o valor que o PC gerou em 3 tentativas
+        ============================================
+        """)
+    
+    funcao validate(guessNumber):
+        resposta = "PARABÉNS! Acertou!!"
+        se guessNumber < GuessNumber.randomNumber:
+            resposta = "O numero que colocou é MENOR do que o numero gerado."
+        se guessNumber > GuessNumber.randomNumber:
+             resposta = "O numero que colocou é MAIOR do que o numero gerado."
+        imprime(resposta)
+
+
+    funcao play():
+        GuessNumber.WelcomeText()
+        i = 1
+        enquanto i <= GuessNumber.tentativas:
+            entrada("Adivinha o numero gerado", guess)
+            GuessNumber.validate(guess)
+            i++
+
+# Execução
+
+GuessNumber().play()

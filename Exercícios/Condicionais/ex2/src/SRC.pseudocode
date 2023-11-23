@@ -1,0 +1,9 @@
+funcao ParImpar(numero):
+    entrada("Diga o seu numero", numero)
+    se numero % 2 == 0:
+        imprime "O numero é par"
+    senao imprime "O numero é ímpar"
+
+
+
+

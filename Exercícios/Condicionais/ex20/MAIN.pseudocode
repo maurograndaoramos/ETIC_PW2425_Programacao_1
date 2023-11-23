@@ -1,0 +1,8 @@
+#Faça um programa que verifique se uma palavra é um palíndromo.
+
+entrada("Digite uma palavra para verificar se é um palíndromo: ", palavra)
+
+se palavra == palavra.inverter():
+    imprime("A palavra '{palavra}' é um palíndromo.")
+senao:
+    imprime("A palavra '{palavra}' não é um palíndromo.")

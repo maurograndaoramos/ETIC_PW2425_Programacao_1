@@ -1,0 +1,7 @@
+#Crie um array com os dias da semana
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.diasSemana()
+app.start()
+

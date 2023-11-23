@@ -1,0 +1,7 @@
+#Desenvolva um sistema simples de gestão de inventário para adicionar, remover e listar itens em um inventário fictício
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificaNumero()
+app.start()
+

@@ -1,0 +1,11 @@
+funcao eVogal(caractere):
+    vogais = ['a','e','i','o','u']
+
+    retorna caractere está em vogais
+
+    entrada("diga um caractere: ", x)
+    se eVogal(x):
+        imprime("é vogal")
+    senao:
+        imprime("é consoante")
+

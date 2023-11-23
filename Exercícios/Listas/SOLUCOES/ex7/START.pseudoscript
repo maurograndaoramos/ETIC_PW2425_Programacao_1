@@ -1,0 +1,30 @@
+# 7. Agenda de Compromissos: Criar um programa que permita ao utilizador agendar
+# compromissos e a sua ordem. O programa deve mostrar os compromissos ordenados
+importar compromisso como modulo
+
+funcao Menu():
+    imprime(
+        """
+        1 - criar compromisso
+        2 - listar compromisso
+        3 - concluir compromisso
+        q - sair 
+        """
+    )
+
+funcao ExecutarOpcao(option):
+    se option == "1":
+        modulo.CriarCompromisso()
+    se option == "2":
+        modulo.ListaCompromissos()
+    se option == "3":
+        modulo.ConcluirCompromisso()
+
+option=""
+enquanto option != "q":
+    imprime(Menu())
+    entrada("Selecione a sua opção: ", option)
+    ExecutarOpcao(option)
+imprime("Até breve!")
+
+

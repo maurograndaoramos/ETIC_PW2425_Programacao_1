@@ -1,0 +1,25 @@
+#Quebre uma string em um array de palavras
+
+funcao quebrarStringEmPalavras(string):
+    arrayPalavras = novo Array
+
+    palavraAtual = ""
+    para i de 0 até tamanho(string) - 1:
+        caractereAtual = string[i]
+
+        se caractereAtual == " " ou caractereAtual == "\t" ou caractereAtual == "\n":
+            se tamanho(palavraAtual) > 0:
+                adicionar(arrayPalavras, palavraAtual)
+                palavraAtual = ""
+        senao:
+            palavraAtual = palavraAtual + caractereAtual
+
+    se tamanho(palavraAtual) > 0:
+        adicionar(arrayPalavras, palavraAtual)
+
+    retorne arrayPalavras
+
+stringExemplo = "Esta é uma frase de exemplo."
+arrayPalavras = quebrarStringEmPalavras(stringExemplo)
+
+imprime("Array de palavras:", arrayPalavras)

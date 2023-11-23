@@ -1,0 +1,7 @@
+lista = []
+
+funcao repetirCinco()
+    numeroRepeticoes = 5
+    cada i em lista(1, numeroRepeticoes + 1):
+        lista.adicionar(3)
+    imprime(lista)

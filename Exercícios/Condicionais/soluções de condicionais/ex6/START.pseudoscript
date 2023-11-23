@@ -1,0 +1,8 @@
+funcao multiploDe5(x):
+    retorna x % 5 == 0
+
+entrada("Diga um numero: ", numero)
+se multiploDe5(numero):
+    imprime("{numero} é multiplo de 5")
+senao:
+    imprime("{numero} não é multiplo de 5")

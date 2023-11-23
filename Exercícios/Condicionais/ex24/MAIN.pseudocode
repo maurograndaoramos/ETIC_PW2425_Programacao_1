@@ -1,0 +1,27 @@
+#Faça um programa que verifique se um ano é ou não um número de Armstrong
+
+funcao numeroDeDigitos(numero):
+    contar = 0
+    enquanto numero > 0:
+        numero = numero // 10
+        contar = contar + 1
+    retorne contar
+
+funcao ehNumeroDeArmstrong(numero):
+    num_digitos = numeroDeDigitos(numero)
+    copia_numero = numero
+    soma = 0
+
+    enquanto copia_numero > 0:
+        digito = copia_numero % 10
+        soma = soma + digito ** num_digitos
+        copia_numero = copia_numero // 10
+
+    retorne soma == numero
+
+entrada("Digite um ano para verificar se é um número de Armstrong: ", ano)
+
+se ehNumeroDeArmstrong(ano):
+    imprime("{ano} é um número de Armstrong.")
+senao:
+    imprime("{ano} não é um número de Armstrong.")

@@ -1,0 +1,37 @@
+#Registo de Compras: Criar um programa que permita ao utilizador registar suas compras, associando produtos e preços. O programa deve calcular o total das compras. Nota: O aluno deve criar um loop para permitir várias entradas de compras.
+
+registroCompras = novo Mapa()
+
+funcao adicionarCompra():
+    produto = entrada("Digite o nome do produto: ")
+    preco = float(entrada("Digite o preço do produto: "))
+
+    registroCompras[produto] = preco
+
+funcao calcularTotalCompras():
+    total = 0
+
+    para preco em valoresDe(registroCompras):
+        total = total + preco
+
+    retorne total
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Compra")
+    imprime("2. Calcular Total das Compras")
+    imprime("3. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        adicionarCompra()
+        imprime("Compra adicionada com sucesso.")
+    se escolha == "2":
+        totalCompras = calcularTotalCompras()
+        imprime(f"O total das compras é: {totalCompras}")
+    se escolha == "3":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

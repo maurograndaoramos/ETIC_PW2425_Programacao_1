@@ -1,0 +1,7 @@
+#Acesse o terceiro elemento de um array
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.arrayCinco()
+app.start()
+

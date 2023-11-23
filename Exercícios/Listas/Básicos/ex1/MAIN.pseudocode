@@ -1,0 +1,7 @@
+#Declare um array vazio.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.arrayVazio()
+app.start()
+

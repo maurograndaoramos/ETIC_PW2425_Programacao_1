@@ -1,0 +1,32 @@
+#Crie um programa que determine se um número é primo de Fermat
+funcao calcularRaizQuadrada(numero):
+    estimativa = numero / 2
+
+    enquanto abs(estimativa * estimativa - numero)
+        estimativa = (estimativa + numero / estimativa) / 2
+
+    retorne estimativa
+
+funcao ehPrimo(numero):
+    se numero <= 1:
+        retorne falso
+    para i de 2 até inteiro(calcularRaizQuadrada(numero)):
+        se numero % i == 0:
+            retorne falso
+    retorne verdadeiro
+
+funcao ehPrimoDeFermat(numero):
+    se ehPrimo(numero):
+        expoente = 0
+        enquanto (2^(2^expoente) + 1) <= numero:
+            se (2^(2^expoente) + 1) == numero:
+                retorne verdadeiro
+            expoente = expoente + 1
+    retorne falso
+
+entrada("Digite um número para verificar se é um primo de Fermat: ", numero)
+
+se ehPrimoDeFermat(numero):
+    imprime("{numero} é um número primo de Fermat.")
+senao:
+    imprime("{numero} não é um número primo de Fermat.")

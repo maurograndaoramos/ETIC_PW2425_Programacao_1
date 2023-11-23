@@ -1,0 +1,36 @@
+#Tradutor Simples: Criar um dicionário com algumas palavras em um idioma e suas traduções. O utilizador deve fornecer uma palavra e o programa deve traduzi-la. Nota: O aluno deve criar um dicionário de traduções e solicitar a palavra ao utilizador
+
+# Inicializar dicionário de traduções
+dicionarioTraducoes = novo Mapa()
+dicionarioTraducoes["hello"] = "olá"
+dicionarioTraducoes["apple"] = "maçã"
+dicionarioTraducoes["book"] = "livro"
+dicionarioTraducoes["dog"] = "cão"
+# Adicionar mais palavras conforme necessário
+
+# Funcao para traduzir palavra
+funcao traduzirPalavra():
+    palavra = entrada("Digite a palavra a ser traduzida: ")
+
+    # Verificar se a palavra está no dicionário de traduções
+    se palavra em dicionarioTraducoes:
+        traducao = dicionarioTraducoes[palavra]
+        imprime(f"A tradução de '{palavra}' é '{traducao}'.")
+    se nao:
+        imprime(f"A palavra '{palavra}' não está no dicionário de traduções.")
+
+# Menu principal
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Traduzir Palavra")
+    imprime("2. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        traduzirPalavra()
+    se escolha == "2":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

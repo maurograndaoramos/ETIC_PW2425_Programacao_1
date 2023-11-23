@@ -1,0 +1,33 @@
+#Faça um programa que determine se um número é primo de Mersenne
+
+funcao calcularRaizQuadrada(numero):
+    estimativa = numero / 2
+
+    enquanto abs(estimativa * estimativa - numero)
+        estimativa = (estimativa + numero / estimativa) / 2
+
+    retorne estimativa
+
+funcao ehPrimo(numero):
+    se numero <= 1:
+        retorne falso
+    para i de 2 até inteiro(calcularRaizQuadrada(numero)):
+        se numero % i == 0:
+            retorne falso
+    retorne verdadeiro
+
+funcao ehPrimoDeMersenne(numero):
+    se ehPrimo(numero):
+        expoente = 2
+        enquanto (2^expoente - 1) <= numero:
+            se (2^expoente - 1) == numero:
+                retorne verdadeiro
+            expoente = expoente + 1
+    retorne falso
+
+entrada("Digite um número para verificar se é um primo de Mersenne: ", numero)
+
+se ehPrimoDeMersenne(numero):
+    imprime(f"{numero} é um número primo de Mersenne.")
+senao:
+    imprime(f"{numero} não é um número primo de Mersenne.")

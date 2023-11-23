@@ -1,0 +1,13 @@
+funcao classificacao (peso, altura)
+    entrada("Informe o seu peso em quilogramas: ", peso)
+    entrada("Informe a sua altura em metros: ", altura)
+    indice = peso / (altura * altura)
+    se indice < 18.5:
+        classificacao = "Abaixo do peso"
+    se 18.5 <= indice < 24.9:
+        classificacao = "Peso normal"
+    se 25.0 <= indice < 29.9:
+        classificacao = "Sobrepeso"
+    senao:
+        classificacao = "Obeso"
+    retorna indice && classificacao

@@ -1,0 +1,25 @@
+#Verifique se um array é um palíndromo
+
+funcao verificaPalindromo(array):
+    tamanhoArray = tamanho(array)
+    meio = inteiro(tamanhoArray / 2)
+
+    para i de 0 até meio - 1:
+        # Comparar elementos simétricos em relação ao meio
+        se array[i] != array[tamanhoArray - 1 - i]:
+            retorne falso  # Não é um palíndromo
+
+    retorne verdadeiro  # É um palíndromo
+
+arrayPalindromo = [1, 2, 3, 4, 3, 2, 1]
+arrayNaoPalindromo = [1, 2, 3, 4, 5, 6]
+
+se verificaPalindromo(arrayPalindromo):
+    imprime("O array é um palíndromo.")
+senao:
+    imprime("O array não é um palíndromo.")
+
+se verificaPalindromo(arrayNaoPalindromo):
+    imprime("O array é um palíndromo.")
+senao:
+    imprime("O array não é um palíndromo.")

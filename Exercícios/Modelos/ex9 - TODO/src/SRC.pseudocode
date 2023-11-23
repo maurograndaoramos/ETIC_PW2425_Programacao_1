@@ -1,0 +1,8 @@
+funcao verificaNumero(numero):
+    entrada("Por favor digite um valor ", numero)
+    se numero == 0:
+        imprime("O numero é Zero")
+    se numero > 0:
+        imprime("O numero é positivo")
+    se numero < 0:
+        imprime("O numero é negativo")

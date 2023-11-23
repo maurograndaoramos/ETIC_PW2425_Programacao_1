@@ -1,0 +1,19 @@
+#Desenvolva um programa que calcule o fatorial de um número
+
+
+funcao calcularFatorial(numero):
+    se numero == 0 ou numero == 1:
+        retorne 1
+    senao:
+        resultado = 1
+        para i de 2 até numero:
+            resultado = resultado * i
+        retorne resultado
+
+entrada("Digite um número para calcular o fatorial: ", numero)
+
+se numero >= 0:
+    fatorial = calcularFatorial(numero)
+    imprime(f"O fatorial de {numero} é {fatorial}.")
+senao:
+    imprime("Não é possível calcular o fatorial de um número negativo.")

@@ -1,0 +1,12 @@
+#Desenvolva um programa que classifique uma pessoa como criança (0-12 anos), adolescente (13-17 anos), adulto (18-59 anos) ou idoso (60 anos ou mais)
+
+entrada("Por favor, indica a tua idade: ", idade)
+
+se idade >= 60:
+    imprime("Consideramos-te um(a) respeitável membro da terceira idade.")
+senao se idade >= 18:
+    imprime("És oficialmente um adulto(a).")
+senao se idade >= 13:
+    imprime("Estás naquela fase da adolescência.")
+senao se idade >= 0:
+    imprime("És ainda uma criança, aproveita!")

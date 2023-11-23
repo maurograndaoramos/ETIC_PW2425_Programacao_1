@@ -1,0 +1,7 @@
+#Crie uma aplicação de lista de tarefas. O programa deve permitir adicionar tarefas, marcar tarefas como concluídas e listar as tarefas pendentes
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.ShowMenu()
+app.start()
+

@@ -1,0 +1,7 @@
+#Remove um elemento ao final de um array.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.removerLista()
+app.start()
+

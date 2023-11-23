@@ -1,0 +1,10 @@
+#Crie um programa que determine se um número é uma potência de 2
+
+entrada("Diz lá um número para verificar se é uma potência de 2: ", numero)
+
+se numero <= 0:
+    imprime("Por favor, insere um número positivo.")
+se (numero && (numero - 1)) == 0:
+    imprime("Sim, {numero} é uma potência de 2.")
+senao:
+    imprime("Não, {numero} não é uma potência de 2.")

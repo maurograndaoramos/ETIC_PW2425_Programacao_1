@@ -1,0 +1,7 @@
+#Escreva um programa que determine se um número é positivo, negativo ou zero
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificaNumero()
+app.start()
+

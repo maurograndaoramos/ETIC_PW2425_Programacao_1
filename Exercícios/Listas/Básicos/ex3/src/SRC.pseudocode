@@ -1,0 +1,5 @@
+funcao arrayCinco()
+    lista = [1,2,3,4,5]
+    minhaLista[3] = terceiroValor 
+    imprime("A terceira posição é {terceiroValor}")
+    

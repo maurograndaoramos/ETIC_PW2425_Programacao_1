@@ -1,0 +1,7 @@
+funcao anoBisexto(ano):
+    entrada("Diga o ano: ", ano)
+    se anoBisexto(ano % 4 == 0) && (ano % 100 != 0):
+    imprime("O ano {ano} é bisexto")            #Sei que o original tinha |"O ano " + ano + "é bisexto", mas assim também deve funcionar?
+    senao:
+    imprime("O ano {ano} não é bisexto")
+

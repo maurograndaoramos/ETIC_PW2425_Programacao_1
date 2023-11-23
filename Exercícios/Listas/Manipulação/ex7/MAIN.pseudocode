@@ -1,0 +1,21 @@
+#Encontre a média dos valores em um array
+
+funcao encontrarMedia(array):
+    se tamanho(array) == 0:
+        imprime("O array está vazio.")
+        retorne nulo
+
+    soma = 0
+
+    para cada elemento em array:
+        soma = soma + elemento
+
+    media = soma / tamanho(array)
+
+    retorne media
+
+arrayNumeros = [10, 5, 8, 15, 3, 20, 7]
+
+mediaValores = encontrarMedia(arrayNumeros)
+
+imprime("A média dos valores no array é:", mediaValores)

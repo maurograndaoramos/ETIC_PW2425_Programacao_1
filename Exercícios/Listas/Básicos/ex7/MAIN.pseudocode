@@ -1,0 +1,7 @@
+#Verifique o tamanho de um array.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.tamanhoLista()
+app.start()
+

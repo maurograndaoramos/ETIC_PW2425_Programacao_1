@@ -1,0 +1,11 @@
+funcao ParImpar(numero):
+    se numero % 2 == 0:
+        retorna "O numero é par"
+    retorna "O numero é ímpar"
+
+
+entrada("Diga o seu numero", x)
+
+imprime(
+    ParImpar(x)
+)

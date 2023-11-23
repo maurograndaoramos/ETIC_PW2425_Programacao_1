@@ -1,0 +1,20 @@
+# 2. Contagem de Letras: Criar um programa que conte a frequência de letras em uma
+# frase fornecida pelo utilizador. Nota: O utilizador deve fazer a inserção da frase.
+# Logica
+funcao contaLetras(frase)
+    # Frase é do tipo string = lista de caracteres
+
+    contagem=() # dicionario
+    cada letra em frase:
+        se letra não está em contagem.chaves():
+            contagem[letra] = 1
+        senao:
+            contagem[letra]+=1
+    retorna contagem
+
+# execução
+
+entrada("Olá! Escreva a sua frase: ", frase)
+
+imprime(contaLetras(frase))
+

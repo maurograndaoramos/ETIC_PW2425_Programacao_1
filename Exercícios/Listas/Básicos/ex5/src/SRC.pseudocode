@@ -1,0 +1,7 @@
+lista = [1,2,3,4,5]
+
+funcao adicionarLista(lista, elemento):
+    entrada("Informe um valor para adicionar ao final da lista: ", elemento)
+    lista.antiga = tamanho(lista)
+    lista.nova = lista.antiga + 1
+    lista[lista.nova] = elemento

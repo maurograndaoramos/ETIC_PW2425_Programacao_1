@@ -1,0 +1,16 @@
+funcao ehPrimo(numero):
+    se numero < 2:
+        retorne Falso
+
+    para i de 2 ate a raiz quadrada de numero + 1:
+        se numero % i == 0:
+            retorne Falso
+
+    retorne Verdadeiro
+
+entrada("Digite um ano para verificar se é primo: ", ano_verificar)
+
+se ehPrimo(ano_verificar):
+    imprime("{ano_verificar} é um ano primo em relação aos anos comuns.")
+senao:
+    imprime("{ano_verificar} não é um ano primo em relação aos anos comuns.")

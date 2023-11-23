@@ -1,0 +1,6 @@
+#Faça um programa que determine se um ano é bissexto
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.anoBisexto
+app.start()

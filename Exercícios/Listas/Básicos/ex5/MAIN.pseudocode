@@ -1,0 +1,7 @@
+#Adicione um elemento ao final de um array.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.adicionarLista()
+app.start()
+

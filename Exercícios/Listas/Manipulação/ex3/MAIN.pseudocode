@@ -1,0 +1,17 @@
+#Copie os elementos de um array para outro.
+
+funcao copiarArray(origem):
+    tamanhoOrigem = tamanho(origem)
+
+    destino = novo Array[tamanhoOrigem]
+
+    para i de 0 até tamanhoOrigem - 1:
+        destino[i] = origem[i]
+
+    retorne destino
+
+arrayOrigem = [1, 2, 3, 4, 5]
+
+arrayDestino = copiarArray(arrayOrigem)
+
+imprime("Array destino:", arrayDestino)

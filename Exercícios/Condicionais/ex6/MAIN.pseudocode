@@ -1,0 +1,4 @@
+importar SRC.pseudocode como MAIN
+
+app = MAIN.multiploDe5()
+app.start()

@@ -1,0 +1,24 @@
+#Some os elementos de dois arrays e armazene o resultado em um terceiro array
+
+funcao somarArrays(array1, array2):
+    tamanho1 = tamanho(array1)
+    tamanho2 = tamanho(array2)
+
+    se tamanho1 == tamanho2:
+        arraySoma = novo Array[tamanho1]
+
+        para i de 0 até tamanho1 - 1:
+            arraySoma[i] = array1[i] + array2[i]
+
+        retorne arraySoma
+    senao:
+        imprime("Os arrays têm tamanhos diferentes. Não é possível somá-los.")
+        retorne nulo
+
+arrayA = [1, 2, 3, 4, 5]
+arrayB = [6, 7, 8, 9, 10]
+
+arrayResultado = somarArrays(arrayA, arrayB)
+
+se arrayResultado nao for nulo:
+    imprime("Resultado da soma dos arrays:", arrayResultado)

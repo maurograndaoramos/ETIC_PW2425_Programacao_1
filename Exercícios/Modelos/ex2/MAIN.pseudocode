@@ -1,0 +1,7 @@
+#Desenvolva um jogo em que o computador escolhe um número aleatório e o jogador tenta adivinhar qual é. O programa deve fornecer dicas para indicar se o palpite está muito alto ou muito baixo
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.Jogo.PrecoCerto()
+app.start()
+

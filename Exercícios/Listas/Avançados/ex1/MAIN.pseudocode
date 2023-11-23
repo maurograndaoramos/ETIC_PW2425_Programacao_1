@@ -1,0 +1,17 @@
+#Implemente um algoritmo de ordenação (por exemplo, Bubble Sort) para ordenar um array.
+
+funcao bubbleSort(array):
+    tamanhoArray = tamanho(array)
+
+    para i de 0 até tamanhoArray - 1:
+        para j de 0 até tamanhoArray - i - 1:
+            se array[j] > array[j + 1]:
+                temp = array[j]
+                array[j] = array[j + 1]
+                array[j + 1] = temp
+
+arrayDesordenado = [64, 34, 25, 12, 22, 11, 90]
+
+bubbleSort(arrayDesordenado)
+
+imprime("Array Ordenado:", arrayDesordenado)

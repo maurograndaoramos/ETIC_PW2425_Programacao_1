@@ -1,0 +1,23 @@
+modelo ConversorMoedas
+    funcao converterMoeda(valor, cambio):
+            dindinGBPparaEUR = 1.15
+            dindinEURparaGBP = 0.87
+        valorConvertido = valor * cambio
+        retorne valorConvertido
+
+    funcao menu()
+    entrada("Qual é a moeda de origem (EUR, GBP): ", moedaOrigem)
+    entrada("Digite o valor na moeda de origem: ", valor)
+
+    se moedaOrigem == "EUR":
+        cambio = dindinGBPparaEUR
+    senao moedaOrigem == "GBP":
+        cambio = dindinEURparaGBP
+
+    entrada("Qual é a moeda de destino (EUR, GBP): ", moedaDestino)
+
+    se moedaOrigem != moedaDestino:
+        valorConvertido = converterMoeda(valor, cambio)
+        imprime("O valor convertido é: {valorConvertido} {moedaDestino}")
+    senao:
+        imprime("A moeda de destino é igual à moeda de origem. Nenhuma conversão necessária.")

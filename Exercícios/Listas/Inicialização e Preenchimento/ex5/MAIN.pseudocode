@@ -1,0 +1,7 @@
+#Preencha um array com os meses do ano.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.mesesAno()
+app.start()
+

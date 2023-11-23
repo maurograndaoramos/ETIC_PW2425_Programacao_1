@@ -1,0 +1,7 @@
+#Preencha um array com valores fornecidos pelo usuário
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.adicionarListaUser()
+app.start()
+

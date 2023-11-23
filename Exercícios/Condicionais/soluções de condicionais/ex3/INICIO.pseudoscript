@@ -1,0 +1,14 @@
+# Por exemplo: 2012 é divisível por 4, mas não 100 (já que o resultado é 20,12). Portanto, 2012 foi bissexto.
+#2000 é divisível por 4 e por 100, já que gera o resultado 20. Sendo assim, 2000 pode não ter sido bissexto — e você tem que fazer mais um cálculo para descobrir.
+
+
+funcao anoBisexto(ano):
+    retorna (ano % 4 == 0) && (ano % 100 != 0)
+
+
+entrada("Diga o ano: ", x)
+
+se anoBisexto(x):
+    imprime("O ano " + x + " é bisexto")
+senao:
+    imprime("O ano {x} não é bisexto")

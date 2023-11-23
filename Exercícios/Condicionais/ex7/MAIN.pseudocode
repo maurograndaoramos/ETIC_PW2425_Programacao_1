@@ -1,0 +1,8 @@
+
+importar SRC.pseudocode
+
+entrada("Diga um numero: ", x)
+se numeroPrimo(x):
+    imprime("{x} é primo!")
+senao:
+    imprime("{x} não é primo.")

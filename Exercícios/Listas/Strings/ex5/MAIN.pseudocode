@@ -1,0 +1,22 @@
+#Substitua todas as ocorrências de uma letra por outra em uma string
+
+funcao substituirLetra(string, letraAntiga, letraNova):
+    arrayCaracteres = novo Array[tamanho(string)]
+
+    para i de 0 até tamanho(string) - 1:
+        se string[i] == letraAntiga:
+            arrayCaracteres[i] = letraNova
+        senao:
+            arrayCaracteres[i] = string[i]
+
+    stringModificada = concatenar(arrayCaracteres)
+
+    retorne stringModificada
+
+stringOriginal = "banana"
+letraAntiga = "a"
+letraNova = "o"
+
+stringModificada = substituirLetra(stringOriginal, letraAntiga, letraNova)
+
+imprime("String modificada:", stringModificada)

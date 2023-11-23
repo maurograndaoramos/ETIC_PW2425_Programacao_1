@@ -1,0 +1,35 @@
+#Ranking de Pontuações: Criar um programa que permita ao utilizador inserir nomes e pontuações de jogadores e, em seguida, mostrar um ranking dos jogadores com as melhores pontuações
+
+rankingJogadores = novo Mapa()
+
+funcao adicionarPontuacao():
+    nomeJogador = entrada("Digite o nome do jogador: ")
+    pontuacao = inteiro(entrada("Digite a pontuação do jogador: "))
+
+    rankingJogadores[nomeJogador] = pontuacao
+
+funcao mostrarRanking():
+    rankingOrdenado = ordenarPorValorDecrescente(rankingJogadores)
+
+    imprime("\nRanking dos Jogadores:")
+    para posicao, (nome, pontuacao) em enumerate(rankingOrdenado, 1):
+        imprime(f"{posicao}. {nome}: {pontuacao} pontos")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Pontuação")
+    imprime("2. Mostrar Ranking")
+    imprime("3. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        adicionarPontuacao()
+        imprime("Pontuação adicionada com sucesso.")
+    se escolha == "2":
+        mostrarRanking()
+    se escolha == "3":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

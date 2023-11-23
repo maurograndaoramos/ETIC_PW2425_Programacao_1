@@ -1,0 +1,5 @@
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.determinaTriangulo()
+app.start()

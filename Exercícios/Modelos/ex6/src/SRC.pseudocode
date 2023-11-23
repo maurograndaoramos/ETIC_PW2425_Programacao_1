@@ -1,0 +1,21 @@
+modelo CalculadoraBMI
+    funcao calcularBMI(peso, alt):
+        bmi = peso / (alt * alt)
+        retorna bmi
+
+    funcao determinarFaixaBMI(bmi):
+        se bmi < 18.5:
+            retorna "Abaixo do peso"
+        senao se 18.5 <= bmi < 24.9:
+            retorna "Peso normal"
+        senao se 25 <= bmi < 29.9:
+            retorna "Sobrepeso"
+        senao:
+            retorna "Obeso"
+
+    funcao menu()
+        entrada("Digita o teu peso (em kg): ", peso)
+        entrada("Digita a tua altura (em metros): ", alt)
+        indiceBMI = calcularBMI(peso, alt)
+        faixaBMI = determinarFaixaBMI(indiceBMI)
+        imprime("O teu índice de massa corporal (BMI) é: {indiceBMI:} e a sua faixa é: {faixaBMI}")

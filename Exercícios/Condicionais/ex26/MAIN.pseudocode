@@ -1,0 +1,22 @@
+#Crie um programa que determine se um número é um quadrado perfeito
+
+funcao calcularRaizQuadrada(numero):
+    estimativa = numero / 2
+
+    enquanto abs(estimativa * estimativa - numero)
+        estimativa = (estimativa + numero / estimativa) / 2
+
+    retorne estimativa
+
+entrada("Digite um número para verificar se é um quadrado perfeito: ", numero)
+
+
+se numero >= 0:
+    raiz_quadrada = inteiro(calcularRaizQuadrada(numero))
+
+    se raiz_quadrada * raiz_quadrada == numero:
+        imprime("{numero} é um quadrado perfeito.")
+    senao:
+        imprime("{numero} não é um quadrado perfeito.")
+senao:
+    imprime("Não é possível determinar se um número negativo é um quadrado perfeito.")

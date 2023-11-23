@@ -1,0 +1,16 @@
+#Inverta a ordem dos elementos em um array
+
+funcao inverterArray(array):
+    tamanhoArray = tamanho(array)
+    meio = tamanhoArray / 2
+
+    para i de 0 até inteiro(meio) - 1:
+        temp = array[i]
+        array[i] = array[tamanhoArray - 1 - i]
+        array[tamanhoArray - 1 - i] = temp
+
+arrayOriginal = [1, 2, 3, 4, 5]
+
+inverterArray(arrayOriginal)
+
+imprime("Array invertido:", arrayOriginal)

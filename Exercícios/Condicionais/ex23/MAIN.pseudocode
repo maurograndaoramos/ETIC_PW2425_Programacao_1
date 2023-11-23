@@ -1,0 +1,15 @@
+#Escreva um programa que determine se um número é um número de Fibonacci
+
+funcao ehQuadradoPerfeito(numero):
+    raiz = inteiro(raizQuadrada(numero))
+    retorne raiz * raiz == numero
+
+funcao ehFibonacci(numero):
+    return ehQuadradoPerfeito(5 * numero * numero + 4) ou ehQuadradoPerfeito(5 * numero * numero - 4)
+
+entrada("Digite um número para verificar se é um número de Fibonacci: ", numero)
+
+se ehFibonacci(numero):
+    imprime("{numero} é um número de Fibonacci.")
+senao:
+    imprime("{numero} não é um número de Fibonacci.")

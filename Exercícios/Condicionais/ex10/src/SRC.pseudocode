@@ -1,0 +1,13 @@
+funcao determinaTriangulo(a,b,c):
+    entrada("lado a", a)
+    entrada("lado b", b)
+    entrada("lado c", c)
+
+    se a==b && b==c:
+        imprime("equilatero")
+    se a != b && b !=c && c != a:
+        imprime("escaleno")
+    senao:
+        imprime("isosceles")
+
+

@@ -1,0 +1,6 @@
+lista = [1,2,3,4,5]
+
+funcao removerLista(lista):
+    lista.antiga = tamanho(lista)
+    lista.nova = lista.antiga - 1
+    lista.nova = lista

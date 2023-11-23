@@ -1,0 +1,19 @@
+# Implemente um algoritmo de pesquisa (por exemplo, Linear Search) em um array
+
+funcao pesquisaLinear(array, elementoBuscado):
+    tamanhoArray = tamanho(array)
+
+    para i de 0 até tamanhoArray - 1:
+        se array[i] == elementoBuscado:
+            retorne i 
+
+    imprime("Elemento não encontrado no array.")
+    retorne nulo
+
+arrayDados = [10, 5, 8, 15, 3, 20, 7]
+elementoProcurado = 15
+
+posicaoElemento = pesquisaLinear(arrayDados, elementoProcurado)
+
+se posicaoElemento nao for nulo:
+    imprime(f"O elemento {elementoProcurado} está na posição {posicaoElemento}.")

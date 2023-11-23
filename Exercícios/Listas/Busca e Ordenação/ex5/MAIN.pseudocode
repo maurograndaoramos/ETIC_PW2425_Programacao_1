@@ -1,0 +1,32 @@
+#Verifique se um array está ordenado
+
+funcao estaOrdenadoCrescente(array):
+    tamanhoArray = tamanho(array)
+
+    para i de 0 até tamanhoArray - 2:
+        se array[i] > array[i + 1]:
+            retorne falso
+
+    retorne verdadeiro 
+
+funcao estaOrdenadoDecrescente(array):
+    tamanhoArray = tamanho(array)
+
+    para i de 0 até tamanhoArray - 2:
+        se array[i] < array[i + 1]:
+            retorne falso
+
+    retorne verdadeiro
+
+arrayCrescente = [1, 3, 5, 7, 9]
+arrayDecrescente = [10, 8, 6, 4, 2]
+
+se estaOrdenadoCrescente(arrayCrescente):
+    imprime("O array crescente está ordenado.")
+senao:
+    imprime("O array crescente não está ordenado.")
+
+se estaOrdenadoDecrescente(arrayDecrescente):
+    imprime("O array decrescente está ordenado.")
+senao:
+    imprime("O array decrescente não está ordenado.")

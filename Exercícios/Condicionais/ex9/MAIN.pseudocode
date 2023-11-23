@@ -1,0 +1,9 @@
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.calculaPrecoFinal()
+app.start()
+
+imprime(
+    "o preco final é de: {calculaPrecoFinal(x)}"
+)

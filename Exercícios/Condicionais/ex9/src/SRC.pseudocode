@@ -1,0 +1,11 @@
+funcao calculaPrecoFinal(preco):
+    entrada("Diga um preco: ", preco)
+    se preco > 100: # desconto de 10%
+        retorna preco * 0.9
+    retorna preco
+
+    
+
+
+
+

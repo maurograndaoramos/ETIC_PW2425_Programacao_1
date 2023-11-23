@@ -1,0 +1,22 @@
+#Agenda de Contatos: Deve criar um programa que permita ao utilizador adicionar nomes e números de telefone a uma agenda de contatos. Nota: Deve criar um menu para adicionar contatos.
+
+agendaContatos = novo Mapa()
+
+funcao adicionarContato(nome, numeroTelefone):
+    agendaContatos[nome] = numeroTelefone
+
+enquanto verdadeiro:
+    imprime("Menu:")
+    imprime("1. Adicionar Contato")
+    imprime("2. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        nomeNovoContato = entrada("Digite o nome do contato: ")
+        numeroNovoContato = entrada("Digite o número de telefone do contato: ")
+        adicionarContato(nomeNovoContato, numeroNovoContato)
+        imprime("Contato adicionado com sucesso.")
+    se escolha == "2":
+        imprime("Saindo do programa.")
+        pararExecucao()

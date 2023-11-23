@@ -1,0 +1,9 @@
+funcao verificarLista(lista, elemento):
+    entrada("Informe um valor para verificar na lista: ", elemento)
+    para i em lista:
+        se i == elemento:
+            imprime("O valor está presente na lista.")
+        senao
+            imprime("O valor não está presente na lista.")
+            
+    

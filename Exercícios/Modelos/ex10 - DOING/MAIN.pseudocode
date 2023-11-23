@@ -1,0 +1,7 @@
+#Crie uma aplicação de reservas que permita aos usuários agendar compromissos ou reservar quartos de hotel. O programa deve gerenciar datas e horários disponíveis
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificaNumero()
+app.start()
+

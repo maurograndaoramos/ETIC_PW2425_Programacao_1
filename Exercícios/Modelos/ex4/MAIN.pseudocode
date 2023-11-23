@@ -1,0 +1,7 @@
+#Faça um conversor de temperatura que permita ao usuário converter entre Celsius e Fahrenheit. O programa deve aceitar uma entrada de temperatura e realizar a conversão
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.Conversor.calculadoraConversao()
+app.start()
+

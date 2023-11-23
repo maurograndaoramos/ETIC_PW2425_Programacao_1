@@ -1,0 +1,3 @@
+importar MAIN_MENU.pseudocode como app
+
+app.landingPage()

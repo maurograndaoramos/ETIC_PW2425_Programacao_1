@@ -1,0 +1,49 @@
+marcacoes = {
+        data = 
+        horario =
+}
+
+funcao verificarDisponibilidade(data, horario):
+    chave = marcacoes.data && marcacoes.horario
+    se chave em marcacoes:
+        retorne False
+    senao:
+        retorne True
+
+funcao agendarCompromisso(data, horario, descricao):
+    se verificarDisponibilidade(data, horario):
+        chave = marcacoes.data && marcacoes.horario
+        marcacoes[chave] = descricao
+        imprime(f"Compromisso agendado para {data} às {horario}: {descricao}")
+    senao:
+        imprime("Desculpe, esse horário já está ocupado. Escolha outro horário.")
+
+# Função para listar todos os marcacoes
+funcao listarmarcacoes():
+    imprime("Marcações Agendadas:")
+    para chave, descricao em marcacoes.itens():
+        imprime(f"{chave} - {descricao}")
+
+# Loop principal da aplicação
+enquanto True:
+    # Exibir opções para o usuário
+    imprime("\nEscolha uma opção:")
+    imprime("1. Agendar Compromisso")
+    imprime("2. Marcar visita")
+    imprime("3. Sair")
+
+    # Solicitar a escolha do usuário
+    entrada("Digite o número da opção desejada: ", escolha)
+
+    # Executar a opção escolhida
+    se escolha == 1:
+        entrada("Digite a data (DD/MM/YYYY): ", dataCompromisso)
+        entrada("Digite o horário (HH:MM): ", horarioCompromisso)
+        entrada("Digite a descrição do compromisso: ", descricaoCompromisso)
+        agendarCompromisso(dataCompromisso, horarioCompromisso, descricaoCompromisso)
+    senao se escolha == 2:
+        listarmarcacoes()
+    senao se escolha == 3:
+        parar  # Sair do loop e encerrar o programa
+    senao:
+        imprime("Opção inválida. Tente novamente.")

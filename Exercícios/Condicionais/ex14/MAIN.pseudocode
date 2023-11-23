@@ -1,0 +1,26 @@
+#Crie um programa que verifique se um número é perfeito.
+#Google: In number theory, a perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. For instance, 6 has divisors 1, 2 and 3, and 1 + 2 + 3 = 6, so 6 is a perfect number.
+
+#Os nerds da matemática metem-me medo.
+
+importar SRC.pseudocode como MAIN
+
+funcao ehPerfeito(numero):
+    soma_divisores = 0
+    para i de 1 ate numero / 2 + 1:
+        se numero % i == 0:
+            soma_divisores += i
+
+    se soma_divisores == numero:
+        retorne Verdadeiro
+    senao:
+        retorne Falso
+
+
+entrada("Digite um número para verificar se é perfeito: ", numero)
+
+
+se ehPerfeito(numero):
+    imprime("{numero} é um número perfeito.")
+senao:
+    imprime("{numero} não é um número perfeito.")

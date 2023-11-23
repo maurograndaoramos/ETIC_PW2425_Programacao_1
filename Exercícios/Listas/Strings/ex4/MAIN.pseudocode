@@ -1,0 +1,22 @@
+#Concatene duas strings
+funcao concatenarStrings(string1, string2):
+    tamanhoString1 = tamanho(string1)
+    tamanhoString2 = tamanho(string2)
+
+    arrayConcatenado = novo Array[tamanhoString1 + tamanhoString2]
+
+    para i de 0 até tamanhoString1 - 1:
+        arrayConcatenado[i] = string1[i]
+
+    para j de 0 até tamanhoString2 - 1:
+        arrayConcatenado[tamanhoString1 + j] = string2[j]
+
+    stringConcatenada = concatenar(arrayConcatenado)
+
+    retorne stringConcatenada
+
+string1 = "Olá, "
+string2 = "mundo!"
+stringConcatenada = concatenarStrings(string1, string2)
+
+imprime("Strings concatenadas:", stringConcatenada)

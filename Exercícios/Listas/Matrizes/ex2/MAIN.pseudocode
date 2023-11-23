@@ -1,0 +1,9 @@
+#Preencha uma matriz com valores fornecidos pelo usuário
+
+matriz3x3 = novo Array[3][3]
+
+para i de 0 até 2:
+    para j de 0 até 2:
+        entrada("Digite o valor para a posição [" + {i} + "][" + {j} + "]: ", matriz3x3[i][j])
+
+imprime("Matriz preenchida pelo utilizador:", matriz3x3)

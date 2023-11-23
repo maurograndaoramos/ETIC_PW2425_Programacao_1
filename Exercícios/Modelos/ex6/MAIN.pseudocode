@@ -1,0 +1,7 @@
+#Crie um programa que calcule o índice de massa corporal (BMI) com base no peso e na altura do usuário. O programa deve indicar em qual faixa de BMI o usuário se encontra
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.Calculadora.menu()
+app.start()
+

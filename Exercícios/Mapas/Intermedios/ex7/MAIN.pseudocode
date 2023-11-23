@@ -1,0 +1,33 @@
+#Agenda de Compromissos: Criar um programa que permita ao utilizador agendar compromissos e a sua ordem. O programa deve mostrar os compromissos ordenados
+
+compromissos = novo Lista()
+
+funcao adicionarCompromisso():
+    compromisso = entrada("Digite o compromisso a ser agendado: ")
+    compromissos.adicionar(compromisso)
+
+funcao mostrarCompromissosOrdenados():
+    compromissos.ordenar()
+
+    imprime("\nCompromissos Ordenados:")
+    para i de 0 até tamanho(compromissos) - 1:
+        imprime(f"{i + 1}. {compromissos[i]}")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Compromisso")
+    imprime("2. Mostrar Compromissos Ordenados")
+    imprime("3. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        adicionarCompromisso()
+        imprime("Compromisso agendado com sucesso.")
+    se escolha == "2":
+        mostrarCompromissosOrdenados()
+    se escolha == "3":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

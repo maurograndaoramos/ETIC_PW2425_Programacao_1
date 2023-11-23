@@ -1,0 +1,97 @@
+#Sistema de Reservas de Viagens: Criar um programa que permita ao utilizador reservar voos, hotéis e alugar carros para uma viagem. Nota: O aluno deve criar modelos para representar voos, hotéis e carros e permitir que o usuário faça reservas
+
+# Definir modelo para representar um voo
+modelo Voo:
+    construtor(origem, destino, data, reserva)
+        origem = ""
+        destino = ""
+        data = ""
+        reserva = falso
+
+# Definir modelo para representar um hotel
+modelo Hotel:
+    construtor(nome, localizacao, checkIn, checkOut, reserva)
+        nome = ""
+        localizacao = ""
+        checkIn = ""
+        checkOut = ""
+        reserva = falso
+
+# Definir modelo para representar um carro alugado
+modelo CarroAlugado:
+    construtor(modelo, marca, dataInicio, dataFim, reserva)
+        modelo = ""
+        marca = ""
+        dataInicio = ""
+        dataFim = ""
+        reserva = falso
+
+# Inicializar listas para armazenar voos, hotéis e carros
+voos = []
+hoteis = []
+carrosAlugados = []
+
+# Funcao para realizar reserva de voo
+funcao reservarVoo(origem, destino, data):
+    voo = novo Voo()
+    voo.origem = origem
+    voo.destino = destino
+    voo.data = data
+    voo.reserva = verdadeiro
+    voos.adicionar(voo)
+    imprime("Voo reservado com sucesso.")
+
+# Funcao para realizar reserva de hotel
+funcao reservarHotel(nome, localizacao, checkIn, checkOut):
+    hotel = novo Hotel()
+    hotel.nome = nome
+    hotel.localizacao = localizacao
+    hotel.checkIn = checkIn
+    hotel.checkOut = checkOut
+    hotel.reserva = verdadeiro
+    hoteis.adicionar(hotel)
+    imprime("Hotel reservado com sucesso.")
+
+# Funcao para realizar reserva de carro alugado
+funcao reservarCarroAlugado(modelo, marca, dataInicio, dataFim):
+    carro = novo CarroAlugado()
+    carro.modelo = modelo
+    carro.marca = marca
+    carro.dataInicio = dataInicio
+    carro.dataFim = dataFim
+    carro.reserva = verdadeiro
+    carrosAlugados.adicionar(carro)
+    imprime("Carro alugado reservado com sucesso.")
+
+# Loop para interação com o utilizador
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Reservar Voo")
+    imprime("2. Reservar Hotel")
+    imprime("3. Reservar Carro Alugado")
+    imprime("4. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        origem = entrada("Digite a cidade de origem: ")
+        destino = entrada("Digite a cidade de destino: ")
+        data = entrada("Digite a data do voo: ")
+        reservarVoo(origem, destino, data)
+    se escolha == "2":
+        nome = entrada("Digite o nome do hotel: ")
+        localizacao = entrada("Digite a localização do hotel: ")
+        checkIn = entrada("Digite a data de check-in: ")
+        checkOut = entrada("Digite a data de check-out: ")
+        reservarHotel(nome, localizacao, checkIn, checkOut)
+    se escolha == "3":
+        modelo = entrada("Digite o modelo do carro: ")
+        marca = entrada("Digite a marca do carro: ")
+        dataInicio = entrada("Digite a data de início do aluguel: ")
+        dataFim = entrada("Digite a data de término do aluguel: ")
+        reservarCarroAlugado(modelo, marca, dataInicio, dataFim)
+    se escolha == "4":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

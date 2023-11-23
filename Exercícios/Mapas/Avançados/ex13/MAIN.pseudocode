@@ -1,0 +1,57 @@
+#Registo de Finanças Pessoais: Criar um programa que permita ao utilizador registar despesas e receitas pessoais. O programa deve calcular o saldo atual. Nota: O aluno deve criar estruturas para representar despesas e receitas
+
+modelo Transacao:
+    construtor(descricao, valor)
+        descricao = ""
+        valor = 0.0
+
+despesas = []
+receitas = []
+
+funcao adicionarDespesa(descricao, valor):
+    despesa = novo Transacao()
+    despesa.descricao = descricao
+    despesa.valor = -valor
+    despesas.adicionar(despesa)
+
+funcao adicionarReceita(descricao, valor):
+    receita = novo Transacao()
+    receita.descricao = descricao
+    receita.valor = valor
+    receitas.adicionar(receita)
+
+funcao calcularSaldoAtual():
+    saldo = 0.0
+    para transacao em despesas:
+        saldo = saldo + transacao.valor
+    para transacao em receitas:
+        saldo = saldo + transacao.valor
+    retorne saldo
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Despesa")
+    imprime("2. Adicionar Receita")
+    imprime("3. Ver Saldo Atual")
+    imprime("4. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        descricao = entrada("Digite a descrição da despesa: ")
+        valor = float(entrada("Digite o valor da despesa: "))
+        adicionarDespesa(descricao, valor)
+        imprime("Despesa adicionada com sucesso.")
+    se escolha == "2":
+        descricao = entrada("Digite a descrição da receita: ")
+        valor = float(entrada("Digite o valor da receita: "))
+        adicionarReceita(descricao, valor)
+        imprime("Receita adicionada com sucesso.")
+    se escolha == "3":
+        saldoAtual = calcularSaldoAtual()
+        imprime(f"O saldo atual é: {saldoAtual}")
+    se escolha == "4":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

@@ -1,0 +1,10 @@
+#Escreva um programa que compare dois números e imprima o maior
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.decideMaisOuMenosMaior()
+app.start()
+
+
+    
+

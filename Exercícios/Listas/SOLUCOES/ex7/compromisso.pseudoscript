@@ -1,0 +1,41 @@
+compromissos = ()
+
+funcao ordernarCompromisso():
+    novoMapa = ()
+    listaAux = compromissos.chaves()
+    cada i em [0..listaAux.tamanho()]:
+        cada j em [i+1..listaAux.tamanho()]:
+            se listaAux[i]>listaAux[j]:
+                temp= listaAux[j]
+                listaAux[j] = listaAux[i]
+                listaAux[i] = temp
+    cada order em listaAux:
+        novoMapa[order] = compromissos[order]
+    compromissos = novoMapa
+
+funcao CriarCompromisso():
+    entrada("Insira a descrição do compromisso", task)
+    entrada("Qual a importância da tarefa?: ", order)
+
+    se order está em compromissos.chaves():
+        imprime("Já existe uma tarefa com essa ordem.")
+        retorna
+    compromissos[order] = task
+    ordernarCompromisso()
+    imprime("Tarefa inserida com sucesso!")
+
+funcao ListaCompromissos():
+    ordernarCompromisso()
+    cada order, task em compromissos:
+        imprime("{order} - {task}")
+
+funcao ConcluirCompromisso():
+    entrada("Qual a importância da tarefa a concluir?", orderToDelete)
+    ordernarCompromisso()
+    novoMapa = ()
+    cada chave, tarefa em compromissos:
+        se chave != orderToDelete:
+            novoMapa[chave] = tarefa 
+
+    compromissos = novoMapa
+    imprime("Tarefa concluida! PARABENS!")

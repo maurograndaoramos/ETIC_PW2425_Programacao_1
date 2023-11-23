@@ -1,0 +1,28 @@
+#Implemente a busca binária em um array ordenado
+
+funcao buscaBinaria(arrayOrdenado, elementoBuscado):
+    inicio = 0
+    fim = tamanho(arrayOrdenado) - 1
+
+    enquanto inicio <= fim:
+        meio = inteiro((inicio + fim) / 2)
+
+        se arrayOrdenado[meio] == elementoBuscado:
+            retorne meio  # Elemento encontrado, retorna a posição
+
+        se arrayOrdenado[meio] > elementoBuscado:
+            fim = meio - 1
+
+        senao:
+            inicio = meio + 1
+
+    imprime("Elemento não encontrado no array.")
+    retorne nulo
+
+arrayOrdenado = [3, 7, 10, 15, 20, 25, 30]
+elementoBuscado = 15
+
+posicaoElemento = buscaBinaria(arrayOrdenado, elementoBuscado)
+
+se posicaoElemento nao for nulo:
+    imprime("O elemento {elementoBuscado} está na posição {posicaoElemento}.")

@@ -1,0 +1,8 @@
+funcao divisivel(numero)
+    entrada("Informe um número inteiro: ", numero)
+    divide3 = (numero % 3 == 0)
+    divide5 = (numero % 5 == 0)
+    se divide3 && divide5:
+        imprime ("O número {numero} é divisível por 3 e por 5.")
+    senao:
+        imprime ("O número {numero} não é divisível por 3 e/ou 5.")

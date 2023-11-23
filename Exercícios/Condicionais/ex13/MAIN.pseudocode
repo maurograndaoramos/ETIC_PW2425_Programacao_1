@@ -1,0 +1,6 @@
+#Desenvolva um programa que calcule o valor do transporte de acordo com a distância percorrida, sendo €1,50 por quilômetro
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.calculadoraDistancia()
+app.start()

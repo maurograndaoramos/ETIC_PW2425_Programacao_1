@@ -1,0 +1,24 @@
+#Calculadora de Médias: Criar um programa que calcule a média de notas fornecidas pelo utilizador para vários alunos. Nota: Deve questionar o utilizador de todas as inserções necessárias
+
+funcao calcularMediaNotas():
+    notasAlunos = novo Mapa()
+    mediasAlunos = novo Mapa()
+
+    numeroAlunos = inteiro(entrada("Digite o número de alunos: "))
+
+    para i de 1 até numeroAlunos:
+        nomeAluno = entrada(f"Digite o nome do aluno {i}: ")
+        notasAluno = novo Lista()
+
+        para j de 1 até 3:
+            nota = float(entrada(f"Digite a nota {j} para {nomeAluno}: "))
+            adicionar(notasAluno, nota)
+
+        mediaAluno = soma(notasAluno) / tamanho(notasAluno)
+        mediasAlunos[nomeAluno] = mediaAluno
+
+    imprime("\nMédias dos Alunos:")
+    cada aluno, media em mediasAlunos:
+        imprime(f"{aluno}: {media}")
+
+calcularMediaNotas()

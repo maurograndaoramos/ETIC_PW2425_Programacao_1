@@ -1,0 +1,7 @@
+funcao decideMaisOuMenosMaior(a,b):
+entrada("Diga o primeiro numero: ", a)
+entrada("Diga o segundo numero: ", b)
+    se a > b:
+        imprime("{a} é maior do que {b}")
+    senao:
+        imprime("{b} é maior do que {a}")

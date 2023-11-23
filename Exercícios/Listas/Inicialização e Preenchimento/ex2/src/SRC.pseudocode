@@ -1,0 +1,6 @@
+lista = []
+
+funcao adicionarListaUser()
+    cada i em lista(1, lista.tamanho + 1):
+        entrada("Digite um valor: ", valor)
+        lista.adicionar(valor)

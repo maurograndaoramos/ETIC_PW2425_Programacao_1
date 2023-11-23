@@ -1,0 +1,10 @@
+#Escreva um programa que calcule o IMC (Índice de Massa Corporal) e classifique a situação do usuário (abaixo do peso, peso normal, acima do peso).
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.classificacao(peso, altura)
+
+app.start()
+
+imprime ("Seu IMC é: {indice}")
+imprime ("Classificação: {classificacao}")

@@ -1,0 +1,7 @@
+#Inicialize um array com 5 repetições do número 3
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.repetirCinco()
+app.start()
+

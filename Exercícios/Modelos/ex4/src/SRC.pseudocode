@@ -1,0 +1,28 @@
+modelo Conversor 
+    funcao celsius2Fahrenheit(celsius):
+        fahrenheit = (celsius * 9/5) + 32
+        retorne fahrenheit
+
+    # Função para converter Fahrenheit para Celsius
+    funcao fahrenheit2Celsius(fahrenheit):
+        celsius = (fahrenheit - 32) * 5/9
+        retorne celsius
+
+
+    funcao calculadoraConversao()
+        imprime("Escolha uma opção:")
+        imprime("(1)Converter de Celsius para Fahrenheit")
+        imprime("(2) Converter de Fahrenheit para Celsius")
+
+        entrada("Digite o número da opção desejada: ")
+
+        se 1:
+            entrada("Digite a temperatura em Celsius: ", celsius)
+            fahrenheit = celsius2Fahrenheit(celsius)
+            imprime("A temperatura em Fahrenheit é: {fahrenheit}°F")
+        se 2:
+            entrada("Digite a temperatura em Fahrenheit: ", fahrenheit)
+            celsius = fahrenheit2Celsius(fahrenheit)
+            imprime("A temperatura em Celsius é: {celsius}°C")
+        senao:
+            imprime("Opção inválida. Tente novamente.")

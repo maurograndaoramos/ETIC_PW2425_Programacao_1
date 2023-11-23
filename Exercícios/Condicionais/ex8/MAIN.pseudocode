@@ -1,0 +1,6 @@
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.eVogal()
+app.start()
+

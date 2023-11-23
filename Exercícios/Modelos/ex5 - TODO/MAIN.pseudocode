@@ -1,0 +1,7 @@
+#Desenvolva um editor de texto simples que permita ao usuário criar, editar e salvar arquivos de texto.
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificaNumero()
+app.start()
+

@@ -1,0 +1,31 @@
+#Some duas matrizes e armazene o resultado em uma terceira matriz
+
+funcao somarMatrizes(matrizA, matrizB):
+    linhas = tamanho(matrizA)
+    colunas = tamanho(matrizA[0])
+
+    matrizResultado = novo Array[linhas][colunas]
+
+    para i de 0 até linhas - 1:
+        para j de 0 até colunas - 1:
+            matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j]
+
+    retorne matrizResultado
+
+matrizA = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+matrizB = [
+    [9, 8, 7],
+    [6, 5, 4],
+    [3, 2, 1]
+]
+
+matrizSoma = somarMatrizes(matrizA, matrizB)
+
+imprime("Matriz A:", matrizA)
+imprime("Matriz B:", matrizB)
+imprime("Matriz Soma:", matrizSoma)

@@ -1,0 +1,65 @@
+#Gestão de Projetos: Criar um programa que permita ao utilizador gerir projetos. Cada projeto deve ter um nome, uma descrição e uma lista de tarefas
+
+modelo Tarefa:
+    construtor(nome, descricao, concluida)
+        nome = ""
+        descricao = ""
+        concluida = falso
+
+modelo Projeto:
+    construtor(nome, descricao, tarefas)
+        nome = ""
+        descricao = ""
+        tarefas = []
+
+funcao adicionarTarefa(projeto, nome, descricao):
+    novaTarefa = novo Tarefa()
+    novaTarefa.nome = nome
+    novaTarefa.descricao = descricao
+    projeto.tarefas.adicionar(novaTarefa)
+    imprime("Tarefa adicionada ao projeto com sucesso.")
+
+funcao marcarTarefaConcluida(projeto, nomeTarefa):
+    para tarefa em projeto.tarefas:
+        se tarefa.nome == nomeTarefa:
+            tarefa.concluida = verdadeiro
+            imprime(f"Tarefa '{tarefa.nome}' marcada como concluída.")
+            retornar
+    imprime("Tarefa não encontrada.")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Criar Projeto")
+    imprime("2. Adicionar Tarefa a Projeto")
+    imprime("3. Marcar Tarefa Concluída")
+    imprime("4. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        nomeProjeto = entrada("Digite o nome do projeto: ")
+        descricaoProjeto = entrada("Digite a descrição do projeto: ")
+        novoProjeto = novo Projeto()
+        novoProjeto.nome = nomeProjeto
+        novoProjeto.descricao = descricaoProjeto
+        imprime("Projeto criado com sucesso.")
+    se escolha == "2":
+        se nao definido(novoProjeto):
+            imprime("Crie um projeto antes de adicionar tarefas.")
+            continuar
+
+        nomeTarefa = entrada("Digite o nome da tarefa: ")
+        descricaoTarefa = entrada("Digite a descrição da tarefa: ")
+        adicionarTarefa(novoProjeto, nomeTarefa, descricaoTarefa)
+    se escolha == "3":
+        se nao definido(novoProjeto):
+            imprime("Crie um projeto antes de marcar tarefas como concluídas.")
+            continuar
+
+        nomeTarefaConcluida = entrada("Digite o nome da tarefa a ser marcada como concluída: ")
+        marcarTarefaConcluida(novoProjeto, nomeTarefaConcluida)
+    se escolha == "4":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

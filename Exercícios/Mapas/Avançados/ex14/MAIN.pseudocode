@@ -1,0 +1,71 @@
+#Sistema de Biblioteca: Criar um sistema de biblioteca que permita ao utilizador pesquisar, emprestar e devolver livros. Nota: O aluno deve criar estruturas para  representar os livros e o estado de empréstimo
+
+modelo Livro:
+    construtor(titulo, autor, disponivel)
+        titulo = ""
+        autor = ""
+        disponivel = verdadeiro
+
+biblioteca = []
+
+funcao adicionarLivro(titulo, autor):
+    novoLivro = novo Livro()
+    novoLivro.titulo = titulo
+    novoLivro.autor = autor
+    biblioteca.adicionar(novoLivro)
+
+funcao pesquisarLivro():
+    termoPesquisa = entrada("Digite o título ou autor do livro: ")
+
+    para livro em biblioteca:
+        se termoPesquisa em livro.titulo ou termoPesquisa em livro.autor:
+            imprime("{livro.titulo} por {livro.autor} - {'Disponível' se livro.disponivel else 'Indisponível'}")
+
+funcao emprestarLivro():
+    tituloLivro = entrada("Digite o título do livro que deseja emprestar: ")
+
+    para livro em biblioteca:
+        se livro.titulo == tituloLivro e livro.disponivel:
+            livro.disponivel = falso
+            imprime("Empréstimo de '{livro.titulo}' realizado com sucesso.")
+            retornar
+
+    imprime("Livro não encontrado ou indisponível para empréstimo.")
+
+funcao devolverLivro():
+    tituloLivro = entrada("Digite o título do livro que deseja devolver: ")
+
+    para livro em biblioteca:
+        se livro.titulo == tituloLivro e nao livro.disponivel:
+            livro.disponivel = verdadeiro
+            imprime("Devolução de '{livro.titulo}' realizada com sucesso.")
+            retornar
+
+    imprime("Livro não encontrado ou já está disponível na biblioteca.")
+
+enquanto verdadeiro:
+    imprime("\nMenu:")
+    imprime("1. Adicionar Livro")
+    imprime("2. Pesquisar Livro")
+    imprime("3. Emprestar Livro")
+    imprime("4. Devolver Livro")
+    imprime("5. Sair")
+
+    escolha = entrada("Escolha uma opção: ")
+
+    se escolha == "1":
+        titulo = entrada("Digite o título do livro: ")
+        autor = entrada("Digite o autor do livro: ")
+        adicionarLivro(titulo, autor)
+        imprime("Livro adicionado à biblioteca.")
+    se escolha == "2":
+        pesquisarLivro()
+    se escolha == "3":
+        emprestarLivro()
+    se escolha == "4":
+        devolverLivro()
+    se escolha == "5":
+        imprime("Saindo do programa.")
+        pararExecucao()
+    senao:
+        imprime("Opção inválida. Tente novamente.")

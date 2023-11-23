@@ -1,0 +1,6 @@
+
+funcao mudarLista()
+    lista = [1,2,3,4,5]
+    entrada("qual é o novo valor?", novoValor)
+    arrayCinco.lista[2] = novoValor
+    imprime("A nova lista é: " + lista)

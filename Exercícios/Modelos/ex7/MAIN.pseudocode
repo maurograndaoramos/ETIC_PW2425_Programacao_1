@@ -1,0 +1,7 @@
+#Desenvolva um conversor de moeda que permita ao usuário converter entre diferentes moedas, fornecendo taxas de câmbio atualizadas
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.Conversor.menu()
+app.start()
+

@@ -1,0 +1,7 @@
+#Declare um array com 5 números inteiros
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.arrayCinco()
+app.start()
+

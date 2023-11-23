@@ -1,0 +1,18 @@
+#Busque a posição de um elemento em um array
+funcao buscarPosicaoElemento(array, elemento):
+    tamanhoArray = tamanho(array)
+
+    para i de 0 até tamanhoArray - 1:
+        se array[i] == elemento:
+            retorne i
+
+    imprime("Elemento não encontrado no array.")
+    retorne nulo
+
+arrayNumeros = [10, 5, 8, 15, 3, 20, 7]
+elementoBuscado = 15
+
+posicaoElemento = buscarPosicaoElemento(arrayNumeros, elementoBuscado)
+
+se posicaoElemento nao for nulo:
+    imprime(f"O elemento {elementoBuscado} está na posição {posicaoElemento}.")

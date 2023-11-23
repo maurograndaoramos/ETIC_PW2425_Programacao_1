@@ -1,0 +1,24 @@
+#Transponha uma matriz
+
+funcao transporMatriz(matriz):
+    linhas = tamanho(matriz)
+    colunas = tamanho(matriz[0])
+
+    matrizTransposta = novo Array[colunas][linhas]
+
+    para i de 0 até linhas - 1:
+        para j de 0 até colunas - 1:
+            matrizTransposta[j][i] = matriz[i][j]
+
+    retorne matrizTransposta
+
+matrizOriginal = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+matrizTransposta = transporMatriz(matrizOriginal)
+
+imprime("Matriz Original:", matrizOriginal)
+imprime("Matriz Transposta:", matrizTransposta)

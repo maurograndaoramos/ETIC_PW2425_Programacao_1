@@ -1,0 +1,21 @@
+#Contagem de Letras: Criar um programa que conte a frequência de letras em uma frase fornecida pelo utilizador. Nota: O utilizador deve fazer a inserção da frase
+
+uncao contarFrequenciaLetras(frase):
+    frequenciaLetras = novo Mapa()
+
+    para caractere em frase:
+        se caractere != " ":
+            se frequenciaLetras.contem(caractere):
+                frequenciaLetras[caractere] = frequenciaLetras[caractere] + 1
+            senao:
+                frequenciaLetras[caractere] = 1
+
+    retorne frequenciaLetras
+
+fraseUsuario = entrada("Digite uma frase: ")
+
+resultadoFrequencia = contarFrequenciaLetras(fraseUsuario)
+
+imprime("Frequência de letras na frase:")
+cada letra, frequencia em resultadoFrequencia:
+    imprime(f"A letra '{letra}' aparece {frequencia} vezes.")

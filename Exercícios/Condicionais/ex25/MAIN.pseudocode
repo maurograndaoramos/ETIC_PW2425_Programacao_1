@@ -1,0 +1,17 @@
+#Desenvolva um programa que calcule a raiz quadrada de um número, se o número for positivo
+
+funcao calcularRaizQuadradaAproximada(numero):
+    estimativa = numero / 2
+
+    enquanto abs(estimativa * estimativa - numero)
+        estimativa = (estimativa + numero / estimativa) / 2
+
+    retorne estimativa
+
+entrada("Digite um número para calcular a raiz quadrada: ", numero)
+
+se numero >= 0:
+    raiz_quadrada = calcularRaizQuadradaAproximada(numero)
+    imprime("A raiz quadrada de {numero} é {raiz_quadrada}.")
+senao:
+    imprime("Não é possível calcular a raiz quadrada de um número negativo.")

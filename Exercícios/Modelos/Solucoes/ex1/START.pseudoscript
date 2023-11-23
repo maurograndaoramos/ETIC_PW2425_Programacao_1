@@ -1,0 +1,42 @@
+#Calculator App: Crie um programa que simule uma calculadora básica, permitindo a entrada de dois números e realizando operações de adição, subtração, multiplicação e divisão.
+
+
+# Logica
+modelo Calculator:
+
+    funcao MostraOpcoes():
+        imprime(
+            "
+            ========= Calculadora ========
+            1 - Adicionar
+            2 - Subtrair
+            3 - Multiplicar
+            4 - Dividir
+            ==============================
+            "
+        )
+
+    funcao executa(option, a, b):
+        resultado = "Opção inválida! TENTA de novo!"
+        se option == 1:
+            resultado = a + b
+        se option == 2:
+            resultado = a - b
+        se option == 3:
+            resultado = a * b
+        se option == 4:
+            resultado= a / b
+       imprime(resultado)
+
+
+# Execução
+
+entrada("diga o primeiro numero: ", a)
+entrada("diga o segundo numero: ", b)
+
+calculadora = Calculator()
+
+calculadora.MostraOpcoes()
+entrada("Escolha a sua opção: ", option)
+
+calculadora.executa(option,a,b)

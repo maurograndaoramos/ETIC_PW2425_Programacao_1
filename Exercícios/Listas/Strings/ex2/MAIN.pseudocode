@@ -1,0 +1,16 @@
+#Inverta uma string
+
+funcao inverterString(string):
+    arrayCaracteres = novo Array[tamanho(string)]
+
+    para i de 0 até tamanho(string) - 1:
+        arrayCaracteres[i] = string[tamanho(string) - 1 - i]
+
+    stringInvertida = concatenar(arrayCaracteres)
+
+    retorne stringInvertida
+
+stringOriginal = "Ola, mundo!"
+stringInvertida = inverterString(stringOriginal)
+
+imprime("String invertida:", stringInvertida)

@@ -1,0 +1,17 @@
+#Conte o número de vogais em uma string
+
+funcao contarVogais(string):
+    vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    contagem = 0
+
+    para i de 0 até tamanho(string) - 1:
+        se string[i] em vogais:
+            contagem = contagem + 1
+
+    retorne contagem
+
+# Exemplo de uso
+stringExemplo = "Olá, mundo!"
+quantidadeVogais = contarVogais(stringExemplo)
+
+imprime("Número de vogais na string:", quantidadeVogais)

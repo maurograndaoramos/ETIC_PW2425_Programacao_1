@@ -1,0 +1,7 @@
+#Crie um programa que simule uma calculadora básica, permitindo a entrada de dois números e realizando operações de adição, subtração, multiplicação e divisão
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.Calculadora.menu()
+app.start()
+

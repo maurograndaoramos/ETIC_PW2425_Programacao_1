@@ -1,0 +1,9 @@
+funcao somaDasNotas(lista):
+    resultado = 0
+    cada nota em lista:
+        resultado = resultado + nota
+    retorna resultado
+
+funcao calculaMedia(notas):
+    soma = somaDasNotas(notas)
+    retorna soma/notas.tamanho()

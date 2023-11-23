@@ -1,0 +1,35 @@
+modelo Calculadora
+    funcao operacao(a, b):
+        se adicao(a, b)
+            retorne a + b
+        se subtracao(a, b)
+            retorne a - b
+        se multiplicacao(a, b):
+            retorne a * b
+        senao divisao(a, b):
+        se a && b != 0:
+            retorne a / b
+        senao:
+            imprime("Erro: Divisão por zero. Vortex vai-se abrir em 3... 2... 1...")
+            crash("* VWOSH *!")
+            
+
+    funcao menu()
+        entrada("Digite o primeiro número: ", numero1)
+        entrada("Digite o segundo número: ", numero2)
+        imprime("Escolha a operação e digite o nrº entre brackets: (1) Adicionar, (2) Subtrair, (3) Multiplicar, (4) Dividir.", operacao)
+
+        se operacao == 1:
+            resultado = operacao.adicao(numero1, numero2)
+            imprime("Resultado da adição: " + resultado)
+        senao se operacao == 2:
+            resultado = operacao.subtracao(numero1, numero2)
+            imprime("Resultado da subtração: " + resultado)
+        senao se operacao == 3:
+            resultado = operacao.multiplicacao(numero1, numero2)
+            imprime("Resultado da multiplicação: " + resultado)
+        senao se operacao == 4:
+            resultado = operacao.divisao(numero1, numero2)
+            imprime("Resultado da divisão: " + resultado)
+        senao:
+            imprime("Operação inválida. Por favor, escolha uma operação válida.")

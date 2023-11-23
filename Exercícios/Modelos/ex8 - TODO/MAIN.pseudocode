@@ -1,0 +1,7 @@
+#Crie um jogo de quiz com perguntas de múltipla escolha. O programa deve rastrear a pontuação do jogador e fornecer feedback sobre as respostas corretas ou incorretas
+
+importar SRC.pseudocode como MAIN
+
+app = MAIN.verificaNumero()
+app.start()
+

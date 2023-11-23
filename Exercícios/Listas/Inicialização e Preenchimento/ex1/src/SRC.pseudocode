@@ -1,0 +1,5 @@
+lista = []
+
+funcao adicionarDez()
+    cada i em lista(1, 10):
+        lista.adicionar(i)

@@ -1,0 +1,16 @@
+# Calculadora de Idade: Criar um programa que calcule a idade de várias pessoas com base no seu ano de nascimento. Nota: O aluno deve solicitar o ano de nascimento ao utilizador.
+
+idades = novo Lista()
+
+funcao calcularIdade(anoNascimento):
+    anoAtual = 2023  
+    idade = anoAtual - anoNascimento
+    retorne idade
+
+enquanto verdadeiro:
+    anoNascimento = inteiro(entrada("Digite o ano de nascimento: "))
+
+
+    idadeCalculada = calcularIdade(anoNascimento)
+    idades.adicionar(idadeCalculada)
+    imprime(f"Idade calculada: {idadeCalculada} anos.")

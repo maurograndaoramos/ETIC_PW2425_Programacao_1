@@ -1,0 +1,13 @@
+Modelo Jogo 
+    numero_secreto = aleatorio()
+
+    funcao precoCerto()    
+        resposta = 0
+        enquanto Verdadeiro:
+            entrada("Adivinha o preço certo: ", resposta)
+            se resposta == numero_secreto:
+                imprime("ESBECTACULE, O PREÇO TÁ CERTO.")
+            se resposta > numero_secreto:
+                imprime("Tá acima, pá. Tenta novamente.")
+            senao:
+                imprime("Abaixo, tá abaixo! Tenta novamente.")

@@ -1,0 +1,24 @@
+#Rotacione os elementos de um array para a direita
+
+funcao rotacionarDireita(array, k):
+    tamanhoArray = tamanho(array)
+    k = k % tamanhoArray
+
+    inverterSubArray(array, tamanhoArray - k, tamanhoArray - 1)
+    inverterSubArray(array, 0, tamanhoArray - k - 1)
+    inverterSubArray(array, 0, tamanhoArray - 1)
+
+funcao inverterSubArray(array, inicio, fim):
+    enquanto inicio < fim:
+        temp = array[inicio]
+        array[inicio] = array[fim]
+        array[fim] = temp
+        inicio = inicio + 1
+        fim = fim - 1
+
+arrayOriginal = [1, 2, 3, 4, 5]
+posicoesParaRotacionar = 2
+
+rotacionarDireita(arrayOriginal, posicoesParaRotacionar)
+
+imprime("Array após a rotação para a direita:", arrayOriginal)
